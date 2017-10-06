@@ -72,10 +72,11 @@ nav i:hover {
 .page {
 	text-align: center;
 	position: relative;
-	height: 100vh;
+	height: 80vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	overflow: hidden;
 }
 
 #first-page {
@@ -179,6 +180,7 @@ nav i:hover {
 	padding: 50px;
 }
 
+
 .contacto {
 	display: flex;
 	padding: 30px;
@@ -192,8 +194,6 @@ nav i:hover {
 	font-size: 40px;
 }
 
-
-
 img {
 	width: 100%;
 	display: block;
@@ -201,7 +201,7 @@ img {
 	transition: all 0.4s ease;
 }
 
-.overlay {
+/*.overlay {
 	position: fixed;
 	top: 60%;
 	right: 50%;
@@ -242,11 +242,15 @@ img {
 .box-notesite {
 	display: flex;
 	flex-flow: row wrap;
-}
+}*/
 
 @media (max-width:1000px) {
 
 	.header i {
+		display: flex;
+	}
+
+	.logo {
 		display: flex;
 	}
 
@@ -298,9 +302,6 @@ img {
 	}
 	
 	nav div {
-		display: flex;
-		flex-flow: column wrap;
-		width: 100%;
 		margin: 0;
 	}
 	
@@ -309,16 +310,12 @@ img {
 		padding: 10px;
 		width: 100%;
 	}
-	
-	nav:hover {
-		width: 100%;
-		height: 50%;
-		background: rgba(250,250,250,.8);
+
+	.section {
+		display: none;
 	}
-	
-	nav a:hover {
-		border: none;
-		text-decoration: none;
-		background: rgba(0,0,0,.8);
-	}
+}
+
+.active > .section {
+	display: block;
 }

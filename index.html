@@ -4,26 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Sofía Díaz-García | Porfolio</title>
+	<title>Sofía Díaz-García | Porfolio</title>
+	<link rel="stylesheet" href="counter.css">
     <link rel="stylesheet" href="main.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
     rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Advent+Pro:300,400|Francois+One" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<script
-	src="https://code.jquery.com/jquery-3.2.1.min.js"
-	integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-	crossorigin="anonymous"></script>
-	<script src="main.js"></script>
+
 </head>
 
+<body>
 <nav>
+
 	<div class="header">
 		<div class="logo">
 			<a href="#first-page"><img src="pajarita.png" alt=""></a>
 		</div>
 		<div>
-			<a href="#"><i class="material-icons">menu</i></a>
+			<a id="menu" href="#"><i class="material-icons">menu</i></a>
 			<a href="#first-page" class="section">Inicio</a>
 			<a href="#second-page" class="section">Profesión</a>
 			<a href="#third-page" class="section">Competencias</a>
@@ -68,7 +67,35 @@
 		<h2>Competencias</h2>
 		<div class="competencias">
 			<div class="photoshop">
-				<h4>Photoshop</h4>
+				<div class="calorie-counter">
+					<div class="chart chart--calorie js-chart" data-goal="100" data-count="80">
+					 <div class="chart__container">
+				   
+					  <svg class="chart__background" x="0px" y="0px" height="120px" viewBox="0 0 220 220">
+								   <g>
+									   <path d="M110,210c-55.1,0-100-44.9-100-100C10,54.9,54.9,10,110,10s100,44.9,100,100C210,165.1,165.1,210,110,210z" />
+								   </g>
+							   </svg>
+					  <!-- /.cchart__background -->
+				   
+					  <svg class="chart__foreground" x="0px" y="0px" height="120px" viewBox="0 0 220 220">
+								   <g>
+									   <path d="M110,210c-55.1,0-100-44.9-100-100C10,54.9,54.9,10,110,10s100,44.9,100,100C210,165.1,165.1,210,110,210z" />
+								   </g>
+							   </svg>
+					  <!-- /.chart__foreground -->
+				   
+					 </div>
+					 <!--  /.chart__container -->
+				   
+					 <div class="chart__count">
+					  <div>
+					   <span class="js-count" data-count="80">0</span> / <span class="js-count" data-count="100">0</span>
+					  </div>
+					  Your goal
+					 </div>
+					</div>
+				   </div>
 			</div>
 			<div class="illustrator">
 				<h4>Illustrator</h4>
@@ -123,7 +150,12 @@
 
 
 
-<body>
-    
+
+    <script
+	src="https://code.jquery.com/jquery-3.2.1.min.js"
+	integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	crossorigin="anonymous"></script>
+	<script src="counter.js"></script>
+	<script src="main.js"></script>
 </body>
 </html>

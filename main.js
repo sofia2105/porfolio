@@ -1,16 +1,18 @@
 $('a[href="#"]').click(function(event) {
 	event.preventDefault();
 });
+
 $('a[href*="#"]').click(function(event) {
     // On-page links
-    if (
+  if (
       location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
       && 
       location.hostname == this.hostname
-    ) {
-      // Figure out element to scroll to
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+  ) {
+    // Figure out element to scroll to
+    console.log(location.pathname)
+    var target = $(this.hash);
+    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
       // Does a scroll target exist?
       if (target.length) {
         // Only prevent default if animation is actually gonna happen
@@ -28,5 +30,10 @@ $('a[href*="#"]').click(function(event) {
           };
         });
       }
-    }
-  });
+  }
+});
+
+var menu= document.getElementById("menu")
+menu.onclick = function() {
+  this.parentNode.classList.toggle("active");
+}
